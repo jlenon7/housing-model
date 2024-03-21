@@ -11,41 +11,44 @@
 
 ## Results
 
-> Verify that train/test data is being over fitting:
-
-<img src="storage/plots/model/is-overfitting-train-test-data.png" width="500px">
-
-> Real prices vs predictions done by the model:
-
-<img src="storage/plots/model/predictions.png" width="500px">
+<table style="padding:10px">
+  <tr>
+    <th>Train/Test data over fitting?</th>
+    <th>Predictions</th>
+  </tr>
+  <tr>
+    <td><img src="storage/plots/model/is-overfitting-train-test-data.png"  alt="1" width="200px" ></td>
+    <td><img src="storage/plots/model/predictions.png"  alt="2" width="200px"></td>
+  </tr>
+</table>
 
 ## Train/Test data analytics
 
-> Count how many data we have with determined number of bedrooms
+<table style="padding:10px">
+  <tr>
+    <th>Count per bedrooms</th>
+    <th>Price distribution per lat/long</th>
+    <th>Price distribution per water front location</th>
+  </tr>
+  <tr>
+    <td><img src="storage/plots/dataframe/c-bedrooms.png" width="200px"></td>
+    <td><img src="storage/plots/dataframe/pd-king-county.png" width="200px"></td>
+    <td><img src="storage/plots/dataframe/pd-per-waterfront.png" width="200px"></td>
+  </tr>
+</table>
 
-<img src="storage/plots/dataframe/c-bedrooms.png" width="500px">
-
-> Price distribution in **King County** city. This plot has been created
-> by using the `lat` and `long` fields to create the map of the city.
-> Greener values mean higher prices, redder means cheaper.
-
-<img src="storage/plots/dataframe/pd-king-county.png" width="500px">
-
-> Price distribution by the number of bedrooms:
-
-<img src="storage/plots/dataframe/pd-per-bedrooms.png" width="500px">
-
-> Price distribution by month:
-
-<img src="storage/plots/dataframe/pd-per-month.png" width="500px">
-
-> Price distribution by year:
-
-<img src="storage/plots/dataframe/pd-per-year.png" width="500px">
-
-> Price distribution by if the house/apartment is waterfront or not:
-
-<img src="storage/plots/dataframe/pd-per-waterfront.png" width="500px">
+<table style="padding:10px">
+  <tr>
+    <th>Price distribution per bedrooms</th>
+    <th>Price distribution per month</th>
+    <th>Price distribution per year</th>
+  </tr>
+  <tr>
+    <td><img src="storage/plots/dataframe/pd-per-bedrooms.png" width="200px"></td>
+    <td><img src="storage/plots/dataframe/pd-per-month.png" width="200px"></td>
+    <td><img src="storage/plots/dataframe/pd-per-year.png" width="200px"></td>
+  </tr>
+</table>
 
 ## Running
 
