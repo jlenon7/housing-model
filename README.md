@@ -10,7 +10,7 @@
 
 ## Results
 
-> Verify that train/test data is being over fitting:
+> Verify that train/test data is not over fitting:
 <img src="storage/plots/model/is-overfitting-train-test-data.png" width="500px">
 
 > Real prices vs predictions done by the model:
