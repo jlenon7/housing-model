@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from helpers import path, create_df, load_model
 from sklearn.model_selection import train_test_split
+from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import mean_absolute_error, mean_squared_error, explained_variance_score
 
 df = create_df(path.resources('housing.csv'))
@@ -26,7 +27,15 @@ model.fit(
   y=y_train,
   validation_data=(X_test,y_test),
   batch_size=128,
-  epochs=400
+  epochs=2000,
+  callbacks=[
+    EarlyStopping(
+      monitor='val_loss',
+      mode='min',
+      verbose=1,
+      patience=25
+    )
+  ]
 )
 
 pd.DataFrame(model.history.history) \
