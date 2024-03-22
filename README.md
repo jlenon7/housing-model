@@ -34,11 +34,11 @@
 
 ## Running
 
-To run the model first create a new Python environment and activate it. I'm using [Anaconda](https://www.anaconda.com/) for that:
+To run the model first create a new Python environment and activate it. I'm using [Anaconda](https://www.anaconda.com/) for that. The command bellow will
+automatically setup the environment with conda and pipenv:
 
 ```shell
-conda create -n housing_env python=3.11
-conda activate housing_env
+make env
 ```
 
 Now install all the project dependencies:

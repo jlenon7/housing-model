@@ -6,13 +6,15 @@ dev-clean-pyc:
 	@find . -name '*.pytest_cache' -exec rm -fr {} +
 
 # Setup the project environment by:
+# - Create the housing_env environment with conda
 # - Run pipenv shell to start the virtual env
 # - Make pipenv use python defined by conda
 # - Active housing_env with conda
 env:
+	conda create -n housing_env python=3.11 -y
 	pipenv shell
 	pipenv --python=$(conda run which python) --site-packages
-	conda activate housing_env
+	conda activate housing_env 
 
 # Install all libraries of package
 install-all:
